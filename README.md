@@ -17,6 +17,7 @@ cp .env.example .env        # y completa los valores (ver más abajo)
 npm run db:up               # PostgreSQL en Docker (puerto 5434)
 npm run db:migrate          # crea las tablas
 npm run db:seed             # Apurímac (UBIGEO), categorías y administrador
+npm run db:seed:demo        # (opcional) negocios y productos de ejemplo para probar
 npm run dev                 # http://localhost:3000
 ```
 
@@ -44,6 +45,7 @@ npm run dev                 # http://localhost:3000
 | `npm run build` / `npm start` | Compila a `dist/` y arranca |
 | `npm run db:generate` | Genera una migración a partir de `src/db/schema.ts` |
 | `npm run db:migrate` / `db:seed` | Aplica migraciones / siembra datos base (idempotentes) |
+| `npm run db:seed:demo` / `db:seed:demo:limpiar` | Carga / elimina 12 negocios y 67 productos ficticios (usuarios `<slug>@demo.catalogo`, contraseña `demo12345`). No corre en producción |
 | `npm run db:studio` | Explorador visual de la base |
 | `npm run db:up` / `db:down` | Levanta / detiene PostgreSQL en Docker |
 
